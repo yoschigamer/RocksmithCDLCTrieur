@@ -1,17 +1,11 @@
-var fs = require('fs');
+const fs = require('fs');
 var x = 0;
-let files = fs.readdirSync('custom');
-let path = 'custom/';
+let path = 'dlc/custom/';
+let files = fs.readdirSync(path);
 
 while (x < files.length) {
     const title = files[x].split('_');
     const song = fs.lstatSync(path + files[x]).isFile();
-    const folder = fs.lstatSync(path + files[x]).isDirectory();
-
-    titleFolder = title[0]
-    title_Song = title[1]
-
-    let j = 0;
 
     if (song === true) {
         fs.mkdir(path+title[0], (err) => {
