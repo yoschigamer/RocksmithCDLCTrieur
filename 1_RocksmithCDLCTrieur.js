@@ -1,12 +1,12 @@
 var fs = require('fs');
-var files = fs.readdirSync('custom')
 var x = 0;
-let path = 'custom/'
+let files = fs.readdirSync('custom');
+let path = 'custom/';
 
 while (x < files.length) {
-    const title = files[x].split('_')
-    song = fs.lstatSync(path + files[x]).isFile()
-    folder = fs.lstatSync(path + files[x]).isDirectory()
+    const title = files[x].split('_');
+    const song = fs.lstatSync(path + files[x]).isFile();
+    const folder = fs.lstatSync(path + files[x]).isDirectory();
 
     titleFolder = title[0]
     title_Song = title[1]
