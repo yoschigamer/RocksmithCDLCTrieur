@@ -1,6 +1,6 @@
 const fs = require('fs');
 var x = 0;
-let path = 'dlc/custom/';
+let path = 'custom/';
 let files = fs.readdirSync(path);
 
 while (x < files.length) {
